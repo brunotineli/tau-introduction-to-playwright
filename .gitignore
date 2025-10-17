@@ -1,12 +1,23 @@
+# OS generated files
 .DS_Store
 
+# Node.js
 node_modules/
+
+# Playwright
+/blob-report/
+
+# Logs
 /test-results/
 /playwright-report/
 /playwright/.auth/
 /playwright/.cache/
 
+# Environment variables
 *.env
+.env.local
+.env.*.local
 
-# Playwright
-/blob-report/
+# IDEs and editors
+.vscode/
+.idea/

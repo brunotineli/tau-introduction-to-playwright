@@ -6,11 +6,11 @@ Welcome to the course "Introduction to Playwright" by [Renata Andrade](https://t
 
 ## Dependencies
 
-- Playwright v1.33.0
-- Node v19.8.1
-- npm v9.6.5
+- Playwright v1.56.0
+- Node v20.19.5
+- npm v10.8.2
 - VSCode 1.77.3 (Universal)
-- Applitools v1.17.0
+- Applitools v1.104.3
 
 > Pre requirements: 
 - [Node setup](https://nodejs.dev/en/learn/how-to-install-nodejs/)

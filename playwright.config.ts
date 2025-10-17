@@ -20,8 +20,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
 
   /* Retry on CI only */
-  // retries: process.env.CI ? 2 : 0,
-  retries: 2,
+  retries: process.env.CI ? 2 : 0,
 
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
@@ -55,14 +54,15 @@ export default defineConfig({
     // viewport: { width: 1280, height: 720 },
     // video: 'on-first-retry',
   },
-    // timeout: 30000, //https://playwright.dev/docs/test-timeouts
-    // expect: {
-      /**
-       * Maximum time expect() should wait for the condition to be met.
-       * For example in `await expect(locator).toHaveText();`
-       */
-      // timeout: 10000,
-    // },
+
+  // timeout: 30000, //https://playwright.dev/docs/test-timeouts
+  // expect: {
+    /**
+     * Maximum time expect() should wait for the condition to be met.
+     * For example in `await expect(locator).toHaveText();`
+     */
+    // timeout: 10000,
+  // },
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   // outputDir: 'test-results/',
@@ -82,32 +82,32 @@ export default defineConfig({
       use: { ...devices['Desktop Firefox'] },
     },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     {
       name: 'all-browsers-and-tests',
       use: { 
         baseURL: 'https://playwright.dev/',
-         ...devices['Desktop Chrome']
+        ...devices['Desktop Chrome']
       },
     },
 
-    {
-      name: 'all-browsers-and-tests',
-      use: { 
-        baseURL: 'https://playwright.dev/',
-         ...devices['Desktop Safari']
-      },
-    },
+    // {
+    //   name: 'all-browsers-and-tests',
+    //   use: { 
+    //     baseURL: 'https://playwright.dev/',
+    //     ...devices['Desktop Safari']
+    //   },
+    // },
 
     {
       name: 'all-browsers-and-tests',
       use: { 
         baseURL: 'https://playwright.dev/',
-         ...devices['Desktop Firefox']
+        ...devices['Desktop Firefox']
       },
     },
 
